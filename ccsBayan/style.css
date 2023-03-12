@@ -1,15 +1,7 @@
 * {
   box-sizing: border-box;
 }
-body {
-  font-family: "Roboto", sans-serif;
-  font-size: 0.5rem;
-}
-h1 {
-  font-size: 1rem;
-  padding-left: 2rem;
-  padding-right: 2rem;
-}
+
 .memes {
   padding-left: 2rem;
   
@@ -24,9 +16,13 @@ h1 {
 .memes:hover .wraper{
     color: blue;
 }
- .wraper:hover .meme{
 
-    display: block;
+ .wraper:hover .meme{
+ /* display: block; */
+  /* height: 25vh;
+  width: 75%;  
+  padding-top: 0.3rem;
+  padding-bottom: 0.5rem; */
 }
 
  .wraper:hover .icon-plus{
@@ -34,31 +30,12 @@ display: none;
    
 }
 .wraper:hover .icon-xmark{
-display: inline;
-
-
-   
+display: inline; 
 }
 div{
  border-top: 0.1rem solid;
   padding-top: 0.3rem;
   padding-bottom: 0.3rem;
-}
-.wraper {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1rem 1fr;
-  align-items: center;
- 
-}
-
-
-label {
-  grid-column-start: 1;
-  grid-column-end: 3;
-  grid-row-start: 1;
-  grid-row-end: 2;
-  
 }
 
 div:last-child {
@@ -84,25 +61,12 @@ div:last-child {
   justify-self: end;
 
 }
-.meme {
-    display: none;
-   width: 100px;
-   height: 100px;
-  grid-column-start: 2;
-  grid-column-end: 3;
-  grid-row-start: 2;
-  grid-row-end: 3;
-  margin: 0 auto;
-  padding-top: 0.3rem;
-  padding-bottom: 0.5rem;
+
   
-  } 
-  .check:focus ~ .meme {
-      display: block;
-      visibility: visible;
-      
+ .check:active ~ .label {
+    color: rgb(29, 93, 157);
 }
-  .check:focus + p {
+  .check:focus ~ .label {
     color: black;
 }
  .check:focus ~ .icon-xmark {
@@ -129,5 +93,51 @@ div:last-child {
       grid-row-end: 2;
   }
 
+
+@media screen and (min-width: 320px) {
+  body{
+     font-family: "Roboto", sans-serif;
+font-size: 0.5rem;
+  }
+h1 {
+  font-size: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+  .wraper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1rem 1fr;
+  align-items: center;
+  }
+  .label{
+    grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  }
+  .meme {
+ 
+   width: 0;
+  height: 0;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  margin: 0 auto;
+  transition-property: height;
+  transition-duration: 300ms; 
+  
+  } 
+ .check:focus ~ .meme {
+    width: 100%;
+      height: 25vh; 
+      visibility: visible;
+      padding-top: 0.3rem;
+  padding-bottom: 0.5rem;
+       
+      
+}
+}
 
 
