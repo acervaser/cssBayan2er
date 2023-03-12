@@ -4,44 +4,21 @@
 
   body{
      font-family: "Roboto", sans-serif;
+     font-size: 1rem;
   }
 .memes {
+  cursor: pointer;
   padding-left: 2rem;
-  
   padding-right: 2rem;
 }
-/* .memes  .image{
+.memes  .image{
     visibility: hidden;  
 }
-.memes:hover .image{
-    visibility: visible; 
-}
-.memes:hover .wraper{
-    color: blue;
-} */
-
- .wraper:hover .meme{
- /* display: block; */
-  /* height: 25vh;
-  width: 75%;  
-  padding-top: 0.3rem;
-  padding-bottom: 0.5rem; */
-}
-
- /* .wraper:hover .icon-plus{
-display: none;
-   
-}
-.wraper:hover .icon-xmark{
-display: inline; 
-} */
 
 
-
-  
- .check:active ~ .label {
-    color: rgb(29, 93, 157);
-}
+  .check:active ~ .label {
+    color: rgb(3, 3, 3);
+} 
   .check:focus ~ .label {
     color: black;
 }
@@ -70,19 +47,19 @@ display: inline;
   } */
 
 
-@media screen and (min-width: 320px) {
+@media  (min-width: 320px) {
   body{
 font-size: 1rem;
   }
 h1 {
-  font-size: 1.5rem;
+  font-size: 2rem;
   padding-left: 2rem;
   padding-right: 2rem;
 }
 div{
  border-top: 0.1rem solid;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 div:last-child {
@@ -134,35 +111,63 @@ div:last-child {
   
   } 
  .check:focus ~ .meme {
-    width: 50vw;
-      height: 50vh; 
+    width: 25vw;
+      height: 25vh; 
       visibility: visible;
-      padding-top: 1rem; 
-}
+ }
  .check:focus ~ .label {
     color: rgb(8, 106, 205);
 }
 }
 
 
-@media screen and (min-width:820px){
-body{
+@media (min-width:820px){
+ body{
 font-size: 2rem;
   }
-  h1 {
-  font-size: 2rem;
+h1 {
+  font-size: 3rem;
   padding-left: 2rem;
   padding-right: 2rem;
 }
-.wraper {
+div{
+ border-top: 0.1rem solid;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+div:last-child {
+  border-bottom: 0.1rem solid;
+}
+.icon-plus {
+  
+  width: 2rem;
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  justify-self: end;
+
+}
+.icon-xmark{
+    display: none;
+     width: 2rem;
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  justify-self: end;
+
+}
+  .wraper {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 2rem 1fr;
+  grid-template-rows: 1rem 1fr;
   align-items: center;
   }
   .label{
     grid-column-start: 1;
-  grid-column-end: 2;
+  grid-column-end: 3;
   grid-row-start: 1;
   grid-row-end: 2;
   }
@@ -180,10 +185,124 @@ font-size: 2rem;
   
   } 
  .check:focus ~ .meme {
-    width: 100%;
+    width: 25vw;
       height: 25vh; 
       visibility: visible;
-      padding-top: 0.3rem;
-  padding-bottom: 0.5rem;   
+      padding-top: 1rem; 
+}
+ .check:focus ~ .label {
+    color: rgb(17, 17, 18);
 }
 }
+
+
+@media (hover: hover) { 
+  .memes:hover .image{
+    visibility: visible; 
+     cursor: pointer;
+}
+.memes:hover .wraper{
+    color: blue;
+}
+div{
+   cursor: pointer;
+}
+ .wraper:hover .meme{
+  width: 20vw;
+      height: 25vh; 
+      visibility: visible;
+      padding-top: 1rem; 
+       cursor: pointer;
+
+ 
+}
+
+  .wraper:hover .icon-plus{
+display: none;
+   
+}
+.wraper:hover .icon-xmark{
+display: inline; 
+} 
+}
+@media (min-width:1920px){
+   body{
+font-size: 2rem;
+width: 50%;
+margin:0 auto;
+   }
+   .memes{
+    cursor: pointer;
+   }
+   h1 {
+  font-size: 3rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+div{
+ border-top: 0.1rem solid;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+   cursor: pointer;
+}
+
+div:last-child {
+  border-bottom: 0.1rem solid;
+}
+.icon-plus {
+  
+  width: 2rem;
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  justify-self: end;
+
+}
+.icon-xmark{
+    display: none;
+     width: 2rem;
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  justify-self: end;
+
+}
+  .wraper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1rem 1fr;
+  align-items: center;
+  }
+  .label{
+    grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
+   cursor: pointer;
+  }
+  .meme {
+ 
+   width: 0;
+  height: 0;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  margin: 0 auto;
+  transition-property: height;
+  transition-duration: 300ms; 
+   cursor: pointer;
+  
+  } 
+ .check:focus ~ .meme {
+    width: 20vw;
+      height: 25vh; 
+      visibility: visible;
+      padding-top: 1rem; 
+}
+ .check:focus ~ .label {
+    color: rgb(17, 17, 18);
+}
+  }
